@@ -12,13 +12,8 @@ import Reviews from "./components/Reviews";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Intro />
-      <CourseInfo />
       <Program />
-      <Experts />
-      <Reviews />
-      <Prices />
     </div>
   );
 }

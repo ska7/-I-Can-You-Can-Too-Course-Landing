@@ -1,28 +1,150 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-scroll";
+import aos from "aos";
 
 export default function Intro() {
+  useEffect(() => {
+    aos.init();
+  }, []);
   return (
-    <div className="intro-section">
-      <h2 className="course-label">
-        Авторский курс по созданию рекламных макетов и анимации от @sm.sahara и
-        @ta.ariadna
-      </h2>
-      <h1>
-        Заработок в Instagram на навыке создания рекламных макетов и stop-motion
-        . Если ты еще не с нами, тогда чего же ты ждешь?
-      </h1>
-      <Link
-        style={{ width: "100%", display: "flex", justifyContent: "center" }}
-        to="prices"
-        activeClass="active"
-        smooth={true}
-        duration={1000}
+    <div style={sectionStyle} className="intro-section">
+      <div
+        data-aos="flip-up"
+        data-aos-offset="400"
+        data-aos-duration="1500"
+        style={logoStyle}
       >
-        <button type="button" className="join-button btn btn-warning">
-          ПРИСОЕДИНИТЬСЯ
-        </button>
-      </Link>
+        <span style={spanOneStyle}>
+          <span style={{ fontSize: "60px" }}>Я</span> могу
+        </span>
+        <div style={triangle} />
+        <span style={spanTwoStyle}>
+          <span style={{ fontSize: "60px" }}>Ты</span> можешь
+        </span>
+      </div>
+      <div
+        style={courseMotoStyle}
+        data-aos="fade"
+        data-aos-delay="1500"
+        data-aos-duration="1500"
+      >
+        <h2 style={h2Style}>Онлайн-семинар про бесстрашный путь девушки</h2>
+        <p style={pStyle}>
+          7-дневный онлайн-саминар на котором 7 эксперток помогут тебе найти
+          вдохновение и получить ценные советы по следующим сферам жизни:
+          отношения и любовь к себе, карьерный рост, сексуальность и восприятие
+          красоты, самооценка, мнение общества и изменения в жизни. Погрузись в
+          атмосферу женской поддержки и дружбы и получи возможность выиграть
+          2000 рублей или подарок от каждой спикерки!
+        </p>
+        <div style={centerRow}>
+          <button style={buttonStyle}>ХОЧУ К ВАМ</button>
+          <button style={buttonStyle}>УВИДЕТЬ ПРОГРАММУ</button>
+        </div>
+      </div>
     </div>
   );
 }
+
+const centerRow = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  alignItems: "center",
+  width: "100%",
+};
+
+const sectionStyle = {
+  position: "relative",
+  maxWidth: "480px",
+  minHeight: "900px",
+  background: "rgba(253, 207, 215, 0.4)",
+  maxWidth: "480px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  overflow: "hidden",
+};
+
+const logoStyle = {
+  marginTop: "20px",
+  position: "relative",
+  fontSize: "20px",
+  display: "flex",
+  height: "220px",
+  width: "220px",
+  flexDirection: "row",
+  background: "#e1c699",
+  borderRadius: "50%",
+  overflow: "hidden",
+  boxShadow: "0 0 10px black",
+};
+
+const spanOneStyle = {
+  fontWeight: "bold",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingLeft: "30px",
+  color: "#626e60",
+  width: "50%",
+  background: "#e1c699",
+};
+const spanTwoStyle = {
+  fontWeight: "bold",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  color: "rgb(225,198,153)",
+  background: "#626e60",
+  width: "45%",
+  paddingRight: "35px",
+};
+
+const triangle = {
+  height: "90px",
+  width: 0,
+  background: "transparent",
+  borderLeft: "15px solid #e1c699",
+  borderBottom: "20px solid #626e60",
+  borderLeftWidth: "50px",
+  borderBottomWidth: "300px",
+  marginLeft: "10px",
+};
+
+const courseMotoStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  marginTop: "20px",
+  textAlign: "center",
+  height: "auto",
+  padding: "20px",
+  width: "90%",
+};
+
+const h2Style = {
+  fontWeight: "bold",
+  fontSize: "35px",
+};
+
+const pStyle = {
+  marginTop: "20px",
+  fontSize: "17px",
+};
+
+const buttonStyle = {
+  marginTop: "13px",
+  width: "40%",
+  height: "auto",
+  padding: "10px",
+  borderRadius: "15px",
+  background: "transparent",
+  color: "#626e60",
+  fontSize: "100%",
+  fontWeight: "bold",
+  border: "3px solid #626e60",
+};

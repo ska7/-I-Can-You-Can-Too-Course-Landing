@@ -10,31 +10,14 @@ import {
   lessonsBlockTwo,
 } from "./lessons";
 import ProgramBlock from "./ProgramBlock";
-import ProgramBlockMentor from "./ProgramBlockMentor";
 
 export default function Program() {
   return (
     <div id="program" className="program-section">
-      <h1>Программа</h1>
       <ProgramBlock
         icon={layout}
-        blockName="БЛОК 1: РЕКЛАМНЫЕ МАКЕТЫ"
+        blockName="ПРОГРАММА СЕМИНАРА"
         lessons={lessonsBlockOne}
-      />
-      <ProgramBlock
-        icon={animationIcon}
-        blockName="БЛОК 2: АНИМАЦИЯ"
-        lessons={lessonsBlockTwo}
-      />
-      <ProgramBlock
-        icon={clientIcon}
-        blockName="БЛОК 3: ПОИСК ЗАКАЗОВ И РАБОТА С КЛИЕНТОМ "
-        lessons={lessonsBlockThree}
-      />
-      <ProgramBlockMentor
-        icon={mentorshipIcon}
-        blockName="МЕНТОРСТВО"
-        lessons={lessonsBlockFour}
       />
     </div>
   );

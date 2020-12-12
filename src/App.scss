@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  // ul {
-  //   // list-style: none;
-  // }
 }
+
+$main-font: "Montserrat", sans-serif;
+$app-yellow: rgb(255, 193, 7);
 
 @mixin center {
   display: flex;
@@ -16,9 +17,6 @@
   justify-content: center;
   align-items: center;
 }
-
-$main-font: "Montserrat", sans-serif;
-$app-yellow: rgb(255, 193, 7);
 
 // Desktops
 @media (min-width: 750px) {
@@ -62,97 +60,14 @@ $app-yellow: rgb(255, 193, 7);
   }
 }
 
-// Navbar
-
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  .navbar-text {
-    color: yellow;
-  }
-  .navbar-brand {
-    align-self: flex-start;
-  }
-  .navbar-toggler {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    outline: none;
-  }
-  .nav-item:hover {
-    cursor: pointer;
-  }
-}
-
-.navbar-toggler-icon {
-  color: yellow;
-
-  // background: yellow;
-}
-
-.container ul {
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  li {
-    padding: 3px;
-  }
-}
 // Intro Section
 
 .intro-section {
-  position: relative;
-  min-height: 900px;
-  max-width: 480px;
-  background-image: linear-gradient(
-      to top,
-      rgba(46, 46, 46, 0.5),
-      rgba(12, 15, 32, 0.4)
-    ),
-    url("./img/pink-back.png");
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
-  h2 {
-    // Авторский Курс
-    margin-top: 100px;
-    background: rgba(233, 232, 232, 0.9);
-    padding: 5px;
-    text-align: center;
-    width: 90%;
-    font-size: 15px;
-    color: rgb(37, 37, 37);
-    font-family: "Oswald", sans-serif;
-    margin-bottom: 50px;
-  }
-  h1 {
-    // Слоган
-    text-align: center;
-    margin-right: 20px;
-    margin-left: 20px;
-    color: rgb(233, 232, 232);
-    font-weight: 200;
-    font-family: "Oswald", sans-serif;
-  }
-  h3 {
-    text-align: center;
-    color: rgb(233, 232, 232);
-    font-family: $main-font;
-  }
-  .join-button {
-    animation: pulse-orange 2s infinite forwards;
-    font-weight: 700;
-    margin-top: 50px;
-    width: 70%;
-    height: 50px;
-  }
+  font-family: "Cormorant Garamond", serif;
+}
+
+.program-section {
+  font-family: "Cormorant Garamond", serif;
 }
 
 // Course Info Section
@@ -270,90 +185,14 @@ $app-yellow: rgb(255, 193, 7);
 // Program Section
 
 .program-section {
-  height: auto;
+  height: 1800px;
   max-width: 480px;
-  background: grey;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  font-family: $main-font;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
+  justify-content: center;
   align-items: center;
-  .program-icon {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 50px;
-    height: 180px;
-    width: 140px;
-  }
-  h1 {
-    text-align: center;
-    padding-top: 100px;
-    color: white;
-  }
-
-  // Simple Block
-  .program-block {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-weight: 800;
-    color: $app-yellow;
-  }
-  .program-plan-section {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 45px;
-    .mentor {
-      // background: $app-yellow;
-    }
-    .lessons-list {
-      border: 3px solid rgb(0, 0, 0);
-      margin-right: auto;
-      margin-left: auto;
-      margin-top: 45px;
-      @include center;
-      max-width: 80%;
-      text-align: center;
-      border-radius: 20px;
-      overflow: hidden;
-      width: 95%;
-      b {
-        color: white;
-      }
-      .long-lesson:after {
-        content: "\A";
-        white-space: pre;
-      }
-      h2 {
-        // Lesson Number
-        padding: 5px;
-        // color: $app-yellow;
-        color: rgb(255, 255, 255);
-        font-family: $main-font;
-        font-size: 25px;
-        width: 100%;
-        background: rgba(34, 34, 34, 0.5);
-      }
-      .lesson {
-        overflow: hidden;
-        font-family: $main-font;
-        padding: 20px 0 20px 0;
-        font-size: 20px;
-        font-weight: 300;
-        // text-shadow: 0 0 15px rgb(255, 255, 255);
-        max-width: 80%;
-      }
-
-      // Mentor Block
-    }
-  }
 }
+// }
 
 // Experts Section
 
@@ -631,18 +470,6 @@ $app-yellow: rgb(255, 193, 7);
     color: rgb(15, 15, 15);
   }
 }
-
-// REMOVE LATER
-// .question-mark {
-//   border: 1px solid black;
-//   padding: 5px;
-//   font-weight: 500;
-//   border-radius: 25%;
-//   margin-top: 50px;
-
-//   background: rgb(61, 61, 61);
-//   color: white;
-// }
 
 // Animation
 

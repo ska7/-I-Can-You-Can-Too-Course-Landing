@@ -8,12 +8,14 @@ import Program from "./components/Program";
 import Experts from "./components/Experts";
 import Prices from "./components/Prices";
 import Reviews from "./components/Reviews";
+import Video from "./components/Video";
 
 function App() {
   return (
     <div className="App">
       <Intro />
       <Program />
+      <Video url={""} />
     </div>
   );
 }

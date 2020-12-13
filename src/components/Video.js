@@ -7,8 +7,7 @@ export default function Video({ url }) {
       <h1 style={h1Style}>ВИДЕООБРАЩЕНИЕ ОТ НАШЕЙ ЖЕНСКОЙ КОМАНДЫ</h1>
       <div style={iframeStyle}>
         <Iframe
-          url="http://www.youtube.com/embed/xDMP3i36naA"
-          styles={youtubeStyle}
+          url="http://www.youtube.com/embed/DZuXhbpuRRY"
           width="90%"
           height="auto"
         />
@@ -20,6 +19,7 @@ export default function Video({ url }) {
 const blockStyle = {
   background: "rgb(225,198,153)",
   height: "500px",
+  maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",

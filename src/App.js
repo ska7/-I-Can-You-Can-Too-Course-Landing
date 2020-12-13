@@ -9,13 +9,15 @@ import Experts from "./components/Experts";
 import Prices from "./components/Prices";
 import Reviews from "./components/Reviews";
 import Video from "./components/Video";
+import { courseFeatures } from "./components/tarrif-features";
 
 function App() {
   return (
     <div className="App">
       <Intro />
       <Program />
-      <Video url={""} />
+      <Video videoID={""} />
+      <Prices features={courseFeatures} />
     </div>
   );
 }

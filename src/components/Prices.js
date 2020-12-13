@@ -1,121 +1,82 @@
-import React, { useState, useEffect } from "react";
-import PriceCard from "./PriceCard";
-import Timer from "./Timer";
-import Carousel from "react-elastic-carousel";
-import Tooltip from "react-simple-tooltip";
-import { css } from "styled-components";
-import {
-  firstTarrif,
-  fourthTarrif,
-  guides,
-  secondPart,
-  secondTarrif,
-  thirdTarrif,
-} from "./tarrif-features";
-export default function Prices() {
-  const [days, setDays] = useState("");
-  const [hours, setHours] = useState("");
-  const [minutes, setMinutes] = useState("");
-  const [seconds, setSeconds] = useState("");
-  const [timerOff, setTimerOff] = useState(false);
-
-  const tooltip = `Бронь места на любой из тарифов — закрепляет за вами место и цену, по которой вы оплатили. Бронь тарифа является частичной оплатой места, то есть остальная оплата — стоимость по тарифу минус бронь.
-  есть рассрочка на все тарифы, кроме первого — платежи в три этапа — сумма тарифа делится на три части и вы вносите оплату в соответствии с графиком платежей.
-  `;
-  const center = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-  // Timer Logic For Automated Prices Change
-  const countDownDate = new Date(Date.UTC(2020, 10, 29, 20, 0, 0)).getTime(); // 20 hours
-
-  useEffect(() => {
-    setInterval(() => {
-      // Get today's date and time
-      const now = new Date().getTime();
-
-      // Find the distance between now and the count down date
-      const distance = countDownDate - now;
-      // Time calculations for days, hours, minutes and seconds
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Update state
-      setDays(days);
-      setHours(hours);
-      setMinutes(minutes);
-      setSeconds(seconds);
-
-      // If the count down is finished, write some text
-      if (distance <= 0) {
-        setTimerOff(true);
-      }
-    }, 1000);
-  });
-
+import React from "react";
+export default function Prices({ features }) {
   return (
-    <div className="prices-section">
-      <h1 id="prices" style={{ marginTop: "35px" }}>
-        Тарифы
-      </h1>
-      <Timer
-        days={days}
-        hours={hours}
-        minutes={minutes}
-        seconds={seconds}
-        timerOff={timerOff}
-      />
-      <Carousel
-        itemPadding={[100, 100, 100, 100]}
-        autoTabIndexVisibleItems={false}
+    <div style={blockStyle} className="prices-section">
+      <div
+        id="prices"
+        data-aos="fade"
+        data-aos-duration="2000"
+        style={titleStyle}
       >
-        <PriceCard
-          firstPrice={"1290"}
-          secondPrice={"1690"}
-          thirdPrice={"1990"}
-          features={firstTarrif}
-          id={1}
-          timerOff={timerOff}
-        />
-
-        <PriceCard
-          firstPrice={"3990"}
-          secondPrice={"4290"}
-          thirdPrice={"4590"}
-          features={secondTarrif}
-          guides={guides}
-          id={2}
-          timerOff={timerOff}
-        />
-
-        <PriceCard
-          firstPrice={"9990"}
-          secondPrice={"10990"}
-          thirdPrice={"11990 "}
-          features={thirdTarrif}
-          secondPart={secondPart}
-          guides={guides}
-          mentor={true}
-          id={3}
-          timerOff={timerOff}
-        />
-        <PriceCard
-          firstPrice={"25000"}
-          secondPrice={"12500"}
-          features={fourthTarrif}
-          secondPart={secondPart}
-          guides={guides}
-          individual={true}
-          id={4}
-          timerOff={timerOff}
-        />
-      </Carousel>
+        <h1 style={h1Style}>ВСЕГО ЗА</h1>
+        <h1 style={h1Style}>
+          <span style={priceStyle}>89₽</span> ТЫ ПОЛУЧИШЬ:
+        </h1>
+        <ul style={listStyle}>
+          {features.map((feature, i) => {
+            return (
+              <li
+                data-aos="zoom-in"
+                data-aos-delay="1000"
+                style={listItemStyle}
+                key={i}
+              >
+                {feature}
+              </li>
+            );
+          })}
+        </ul>
+        <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
+          Я с вами, девочки!
+        </button>
+      </div>
     </div>
   );
 }
+
+const blockStyle = {
+  height: "120vh",
+  maxWidth: "480px",
+  display: "flex",
+  flexDirection: "column",
+  textAlign: "center",
+  background: "rgb(254,236,239)",
+};
+
+const titleStyle = {
+  margin: "50px 0 0 0",
+};
+
+const h1Style = {
+  margin: 0,
+  width: "95%",
+};
+
+const priceStyle = {
+  color: "red",
+};
+
+const listStyle = {
+  margin: "50px 0",
+  width: "90%",
+  listStyle: "none",
+};
+
+const listItemStyle = {
+  fontSize: "20px",
+  paddingLeft: "50px",
+  margin: "35px 0",
+};
+
+const buttonStyle = {
+  marginTop: "13px",
+  width: "80%",
+  height: "auto",
+  padding: "10px",
+  borderRadius: "15px",
+  background: "transparent",
+  color: "brown",
+  fontSize: "20px",
+  fontWeight: "bold",
+  border: "2px solid brown",
+};

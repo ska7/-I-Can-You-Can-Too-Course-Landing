@@ -38,8 +38,24 @@ export default function Intro() {
           2000 рублей или подарок от каждой спикерки!
         </p>
         <div style={centerRow}>
-          <button style={buttonStyle}>ХОЧУ К ВАМ</button>
-          <button style={buttonStyle}>УВИДЕТЬ ПРОГРАММУ</button>
+          <Link
+            style={buttonLinkStyle}
+            to="prices"
+            active
+            smooth
+            duration="1000"
+          >
+            <button style={buttonStyle}>ХОЧУ К ВАМ</button>
+          </Link>
+          <Link
+            style={buttonLinkStyle}
+            to="program"
+            active
+            smooth
+            duration="1000"
+          >
+            <button style={buttonStyle}>УВИДЕТЬ ПРОГРАММУ</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -138,7 +154,7 @@ const pStyle = {
 
 const buttonStyle = {
   marginTop: "13px",
-  width: "40%",
+  width: "100%",
   height: "auto",
   padding: "10px",
   borderRadius: "15px",
@@ -147,4 +163,10 @@ const buttonStyle = {
   fontSize: "100%",
   fontWeight: "bold",
   border: "3px solid #626e60",
+};
+
+const buttonLinkStyle = {
+  height: "auto",
+  background: "transparent",
+  width: "40%",
 };

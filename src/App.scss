@@ -66,7 +66,6 @@ $app-yellow: rgb(255, 193, 7);
 
 .program-section {
   font-family: "Cormorant Garamond", serif;
-  height: 1800px;
   max-width: 480px;
   display: flex;
   flex-direction: column;
@@ -81,93 +80,7 @@ $app-yellow: rgb(255, 193, 7);
 // Prices Section
 
 .prices-section {
-  position: relative;
-  border-top: 1px solid black;
-  height: auto;
-  background: url("./img/grey-cube-back.jfif");
-  font-family: $main-font;
-  @include center;
-  h1 {
-    text-align: center;
-    font-weight: 800;
-  }
-  .timer {
-    padding-top: 20px;
-    font-family: $main-font;
-    font-weight: 200;
-    width: 90%;
-    @include center;
-    h2 {
-      font-family: $main-font;
-    }
-
-    h1 {
-      width: 100%;
-    }
-  }
-  .off {
-    display: none;
-  }
-  .price-card {
-    margin-top: 50px;
-    min-height: 600px;
-    margin-bottom: 20px;
-    width: 300px;
-    box-shadow: 1px -5px 10px 1px black;
-    border-radius: 15px;
-    border-bottom: 1px solid black;
-  }
-  .price-card2 {
-    background: rgba(235, 147, 17, 0.1);
-  }
-  .price-card3 {
-    // background: $app-yellow;
-  }
-  .price-card4 {
-    background: $app-yellow;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-  }
-  ul li {
-    text-decoration: none;
-    list-style: none;
-    text-align: left;
-    padding: 10px 5px 5px 20px;
-    font-weight: 600;
-  }
-  .prices-block {
-    @include center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background: rgb(53, 53, 53);
-    width: 100%;
-    h1,
-    h2,
-    h3 {
-      padding-top: 8px;
-      color: $app-yellow;
-    }
-    h1,
-    h2 {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  .yandex {
-    padding: 20px;
-    .yandex-buttons {
-      margin: 25;
-      // pointer-events: none;
-    }
-    h4 {
-      font-size: 20px;
-      margin: 20px;
-      // width: 100%;
-    }
-  }
+  font-family: "Cormorant Garamond", serif;
 }
 
 // Reviews Section

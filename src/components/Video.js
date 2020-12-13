@@ -1,36 +1,12 @@
-import React, { useState, useEffect } from "react";
-import Iframe from "react-iframe";
+import React from "react";
 import YouTube from "react-youtube";
 
-export default function Video({ url }) {
-  const [opts, setOpts] = useState({
-    height: "100%",
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-    },
-  });
-
-  const handlePlay = (event) => {
-    event.target.setSize(window.screen.width, window.screen.height);
-  };
-
-  const handleStop = (event) => {
-    event.target.setSize("100%", "100%");
-  };
-
+export default function Video({ videoID }) {
   return (
     <div style={blockStyle} className="video-section">
       <h1 style={h1Style}>ВИДЕООБРАЩЕНИЕ ОТ НАШЕЙ ЖЕНСКОЙ КОМАНДЫ</h1>
       <div style={iframeStyle}>
-        <YouTube
-          videoId="DZuXhbpuRRY"
-          id="player"
-          opts={opts}
-          onPlay={handlePlay}
-          onPause={handleStop}
-          onEnd={handleStop}
-        />
+        <YouTube videoId="FoMlSB6ftQg" opts={opts} />
       </div>
     </div>
   );
@@ -38,7 +14,7 @@ export default function Video({ url }) {
 
 const blockStyle = {
   background: "rgb(225,198,153)",
-  height: "500px",
+  height: "130vh",
   maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
@@ -58,7 +34,13 @@ const iframeStyle = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "200px",
-  width: "90%",
+  height: "800px",
+  width: "85%",
   background: "rgb(98,110,96)",
+  borderRadius: "20px",
+};
+
+const opts = {
+  height: "700px",
+  width: "100%",
 };

@@ -16,7 +16,7 @@ export default function PaymentFormMeta({ charge, state }) {
       />{" "}
       <input type="hidden" name="label" value="$order_id" />{" "}
       <input type="hidden" name="quickpay-form" value="shop" />{" "}
-      <input type="hidden" name="targets" value="`'Я могу - Ты можешь' Курс`" />{" "}
+      <input type="hidden" name="targets" value="'Я могу - Ты можешь' Курс" />{" "}
       <input type="hidden" name="sum" value={charge} data-type="number" />{" "}
       <input type="hidden" name="comment" value={state} />{" "}
       <input type="hidden" name="need-fio" value="false" />{" "}
@@ -26,5 +26,3 @@ export default function PaymentFormMeta({ charge, state }) {
     </>
   );
 }
-
-// Хочу к вам, я из России

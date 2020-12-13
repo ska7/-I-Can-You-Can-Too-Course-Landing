@@ -58,6 +58,9 @@ $app-yellow: rgb(255, 193, 7);
   .prices-section {
     max-width: 480px;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .intro-section {

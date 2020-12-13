@@ -1,12 +1,12 @@
 import React from "react";
 import YouTube from "react-youtube";
 
-export default function Video({ videoID }) {
+export default function Video() {
   return (
     <div style={blockStyle} className="video-section">
-      <h1 style={h1Style}>ВИДЕООБРАЩЕНИЕ ОТ НАШЕЙ ЖЕНСКОЙ КОМАНДЫ</h1>
+      <h1 style={h1Style}>ВИДЕООБРАЩЕНИЕ ОТ НАШЕГО ЖЕНСКОГО КОМЬЮНИТИ</h1>
       <div style={iframeStyle}>
-        <YouTube videoId="FoMlSB6ftQg" opts={opts} />
+        <YouTube videoId="3N5dRVFlsNQ" opts={opts} />
       </div>
     </div>
   );
@@ -14,7 +14,7 @@ export default function Video({ videoID }) {
 
 const blockStyle = {
   background: "rgb(225,198,153)",
-  minHeight: "130vh",
+  minHeight: "100vh",
   maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
@@ -34,7 +34,7 @@ const iframeStyle = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "800px",
+  height: "450px",
   width: "85%",
   background: "rgb(98,110,96)",
   borderRadius: "20px",
@@ -42,6 +42,6 @@ const iframeStyle = {
 };
 
 const opts = {
-  height: "700px",
+  height: "400px",
   width: "100%",
 };

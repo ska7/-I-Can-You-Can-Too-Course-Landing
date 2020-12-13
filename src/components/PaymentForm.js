@@ -3,7 +3,7 @@ import PaymentFormMeta from "./PaymentFormMeta";
 
 export default function PaymentForm() {
   const [state, setState] = useState("");
-  const [charge, setCharge] = useState(2);
+  const [charge, setCharge] = useState(199);
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function PaymentForm() {
         <PaymentFormMeta charge={charge} state={state} />
         <div style={centerColumn}>
           <label style={{ textAlign: "center" }} for="comment-area">
-            <p style={pStyle}>Укажи свой ник в соцсетях</p>
+            <p style={pStyle}>Укажи свой ник в Instagram</p>
           </label>
           <input
             style={userInputFieldStyle}
@@ -34,7 +34,7 @@ export default function PaymentForm() {
           <input
             style={buttonStyle}
             type="submit"
-            value="Яндекс Деньги ₽"
+            value="Продолжить"
             onClick={() => setCharge(charge)}
           />
         </div>

@@ -11,7 +11,7 @@ export default function ProgramBlock({ lessons, blockName }) {
         <div id="program" className="lessons-list">
           {lessons.map((lesson, index) => {
             return (
-              <span style={centerColumn} data-aos="zoom-in-down" key={index}>
+              <span data-aos="zoom-in-up" style={centerColumn} key={index}>
                 <div style={expertDayStyle}>
                   <h2 style={dayNumberStyle}>{`День ${index + 1}`}</h2>
                   <div style={avatarStyle}>

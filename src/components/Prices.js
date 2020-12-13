@@ -20,16 +20,12 @@ export default function Prices({ features }) {
         <PaymentForm />
       </Modal>
 
-      <div
-        id="prices"
-        data-aos="fade"
-        data-aos-duration="2000"
-        style={titleStyle}
-      >
+      <div data-aos="fade" data-aos-duration="2000" style={titleStyle}>
         <h1 style={h1Style}>ВСЕГО ЗА</h1>
         <h1 style={h1Style}>
-          <span style={priceStyle}>99₽</span> ТЫ ПОЛУЧИШЬ:
+          <span style={priceStyle}>199₽</span>
         </h1>
+        <h1 style={h1Style}>ТЫ ПОЛУЧИШЬ:</h1>
         <ul style={listStyle}>
           {features.map((feature, i) => {
             return (
@@ -45,18 +41,17 @@ export default function Prices({ features }) {
           })}
         </ul>
         <a href="https://monecle.com/buy/40187" target="_blank">
-          <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
-            Хочу на семинар, я из Украины
+          <button id="prices" data-aos="zoom-in" style={buttonStyle}>
+            Хочу к вам, я из Украины
           </button>
         </a>
         <a>
           <button
             onClick={() => openModal(true)}
             data-aos="zoom-in"
-            data-aos-delay="1000"
             style={buttonStyle}
           >
-            Хочу на семинар, я из другой страны
+            Хочу к вам, я из другой страны
           </button>
         </a>
       </div>
@@ -65,7 +60,7 @@ export default function Prices({ features }) {
 }
 
 const blockStyle = {
-  minHeight: "120vh",
+  minHeight: "140vh",
   maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
@@ -88,7 +83,7 @@ const priceStyle = {
 };
 
 const listStyle = {
-  margin: "50px 0",
+  margin: "100px 0",
   width: "90%",
   listStyle: "none",
 };
@@ -110,6 +105,7 @@ const buttonStyle = {
   fontSize: "20px",
   fontWeight: "bold",
   border: "2px solid brown",
+  fontFamily: `"Cormorant Garamond", serif`,
 };
 
 const modalStyle = {

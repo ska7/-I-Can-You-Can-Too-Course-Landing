@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import "animate.css/animate.min.css";
 
 export default function Intro() {
   return (
     <div style={sectionStyle} className="intro-section">
-      <div className="animate__animated animate__flipInX" style={logoStyle}>
+      <div style={logoStyle} data-aos="flip-up">
         <span style={spanOneStyle}>
           <span style={{ fontSize: "60px" }}>Я</span> могу
         </span>
@@ -14,18 +13,12 @@ export default function Intro() {
           <span style={{ fontSize: "60px" }}>Ты</span> можешь
         </span>
       </div>
-      <div
-        style={courseMotoStyle}
-        data-aos="fade"
-        data-aos-delay="1500"
-        data-aos-duration="1500"
-      >
+      <div style={courseMotoStyle} data-aos="fade-in" data-aos-delay="2000">
         <h2 style={h2Style}>Онлайн-семинар про бесстрашный путь девушки</h2>
         <p style={pStyle}>
           7-дневный онлайн-саминар на котором 7 эксперток помогут тебе найти
-          вдохновение и получить ценные советы по следующим сферам жизни:
-          отношения и любовь к себе, карьерный рост, сексуальность и восприятие
-          красоты, самооценка, мнение общества и изменения в жизни. Погрузись в
+          вдохновение и получить ценные советы в ключевых сферах жизни девушки:
+          от отношений и любви к себе до красоты и сексуальности. Погрузись в
           атмосферу женской поддержки и дружбы и получи возможность выиграть
           2000 рублей или подарок от каждой спикерки!
         </p>
@@ -151,7 +144,7 @@ const buttonStyle = {
   borderRadius: "15px",
   background: "transparent",
   color: "#626e60",
-  fontSize: "90%",
+  fontSize: "80%",
   fontWeight: "bold",
   border: "3px solid #626e60",
 };
@@ -160,4 +153,5 @@ const buttonLinkStyle = {
   height: "auto",
   background: "transparent",
   width: "40%",
+  marginTop: "60px",
 };

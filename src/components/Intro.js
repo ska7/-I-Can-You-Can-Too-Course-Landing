@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import aos from "aos";
+import AOS from "aos";
 
 export default function Intro() {
   useEffect(() => {
-    aos.init();
+    AOS.init();
   }, []);
   return (
     <div style={sectionStyle} className="intro-section">
@@ -45,7 +45,7 @@ export default function Intro() {
             smooth
             duration="1000"
           >
-            <button style={buttonStyle}>ХОЧУ К ВАМ</button>
+            <button style={buttonStyle}>Я С ВАМИ, ДЕВОЧКИ!</button>
           </Link>
           <Link
             style={buttonLinkStyle}
@@ -54,7 +54,7 @@ export default function Intro() {
             smooth
             duration="1000"
           >
-            <button style={buttonStyle}>УВИДЕТЬ ПРОГРАММУ</button>
+            <button style={buttonStyle}>ПОСМОТРЕТЬ ПРОГРАММУ</button>
           </Link>
         </div>
       </div>
@@ -75,7 +75,6 @@ const sectionStyle = {
   maxWidth: "480px",
   minHeight: "900px",
   background: "rgba(253, 207, 215, 0.4)",
-  maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

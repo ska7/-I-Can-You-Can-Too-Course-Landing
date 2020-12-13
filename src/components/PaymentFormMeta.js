@@ -3,7 +3,7 @@ import React from "react";
 export default function PaymentFormMeta({ charge, state }) {
   return (
     <>
-      <input type="hidden" name="receiver" value="410014822462996" />
+      <input type="hidden" name="receiver" value="4100116226646086" />
       <input
         type="hidden"
         name="formcomment"
@@ -26,3 +26,5 @@ export default function PaymentFormMeta({ charge, state }) {
     </>
   );
 }
+
+// Хочу к вам, я из России

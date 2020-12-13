@@ -34,15 +34,8 @@ export default function PaymentForm() {
           <input
             style={buttonStyle}
             type="submit"
-            value="RUB ₽"
+            value="Яндекс Деньги ₽"
             onClick={() => setCharge(charge)}
-          />
-
-          <input
-            onClick={() => setCharge(1000)}
-            style={buttonStyle}
-            type="submit"
-            value="UAH ₴"
           />
         </div>
       </form>

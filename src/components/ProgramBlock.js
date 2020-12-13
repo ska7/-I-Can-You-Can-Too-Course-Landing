@@ -1,14 +1,7 @@
 import React from "react";
-import demo from "../img/Арина.jpg";
 import { Link } from "react-scroll";
 
-export default function ProgramBlock({
-  blockName,
-  lessons,
-  name,
-  avatar,
-  link,
-}) {
+export default function ProgramBlock({ lessons, blockName }) {
   return (
     <div style={blockStyle}>
       <h2 style={titleStyle} className="program-block">
@@ -21,10 +14,14 @@ export default function ProgramBlock({
               <span style={centerColumn} data-aos="zoom-in-down" key={index}>
                 <div style={expertDayStyle}>
                   <h2 style={dayNumberStyle}>{`День ${index + 1}`}</h2>
-                  <img style={avatarStyle} src={demo} alt="demo"></img>
+                  <div style={avatarStyle}>
+                    <img style={imageStyle} src={lesson.avatar} alt="expert" />
+                  </div>
                 </div>
-                <h3 style={h3Style}>Диа Блум @dia.bloom</h3>
-                <b style={lessonStyle}>{lesson}</b>
+                <a style={aStyle} href={lesson.link} target="_blank">
+                  <h3 style={h3Style}>{lesson.name}</h3>
+                </a>
+                <b style={lessonStyle}>{lesson.topic}</b>
               </span>
             );
           })}
@@ -50,6 +47,7 @@ const blockStyle = {
   background: "rgb(98,110,96)",
   display: "flex",
   minHeight: "260vh",
+  maxWidth: "480px",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
@@ -85,6 +83,16 @@ const avatarStyle = {
   height: "50px",
   width: "50px",
   borderRadius: "50%",
+  overflow: "hidden",
+};
+
+const imageStyle = {
+  height: "50px",
+  width: "50px",
+};
+
+const aStyle = {
+  textDecoration: "none",
 };
 
 const h3Style = {

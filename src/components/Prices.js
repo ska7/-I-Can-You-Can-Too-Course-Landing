@@ -45,14 +45,21 @@ export default function Prices({ features }) {
           })}
         </ul>
 
-        <button
-          onClick={() => openModal(true)}
-          data-aos="zoom-in"
-          data-aos-delay="1000"
-          style={buttonStyle}
-        >
-          Я с вами, девочки!
-        </button>
+        <a>
+          <button
+            onClick={() => openModal(true)}
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+            style={buttonStyle}
+          >
+            Хочу на семинар, я из другой страны
+          </button>
+        </a>
+        <a href="https://monecle.com/buy/40187" target="_blank">
+          <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
+            Хочу на семинар, я из Украины
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -60,7 +67,7 @@ export default function Prices({ features }) {
 
 const blockStyle = {
   minHeight: "120vh",
-  width: "100%",
+  maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",

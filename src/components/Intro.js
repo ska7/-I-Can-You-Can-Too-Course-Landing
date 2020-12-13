@@ -1,19 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-import AOS from "aos";
+import "animate.css/animate.min.css";
 
 export default function Intro() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <div style={sectionStyle} className="intro-section">
-      <div
-        data-aos="flip-up"
-        data-aos-offset="400"
-        data-aos-duration="1500"
-        style={logoStyle}
-      >
+      <div className="animate__animated animate__flipInX" style={logoStyle}>
         <span style={spanOneStyle}>
           <span style={{ fontSize: "60px" }}>Я</span> могу
         </span>

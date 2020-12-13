@@ -44,7 +44,11 @@ export default function Prices({ features }) {
             );
           })}
         </ul>
-
+        <a href="https://monecle.com/buy/40187" target="_blank">
+          <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
+            Хочу на семинар, я из Украины
+          </button>
+        </a>
         <a>
           <button
             onClick={() => openModal(true)}
@@ -53,11 +57,6 @@ export default function Prices({ features }) {
             style={buttonStyle}
           >
             Хочу на семинар, я из другой страны
-          </button>
-        </a>
-        <a href="https://monecle.com/buy/40187" target="_blank">
-          <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
-            Хочу на семинар, я из Украины
           </button>
         </a>
       </div>

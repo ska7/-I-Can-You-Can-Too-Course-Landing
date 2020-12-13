@@ -1,17 +1,19 @@
 import React from "react";
 import Iframe from "react-iframe";
+import YouTube from "react-youtube";
 
 export default function Video({ url }) {
   return (
     <div style={blockStyle} className="video-section">
       <h1 style={h1Style}>ВИДЕООБРАЩЕНИЕ ОТ НАШЕЙ ЖЕНСКОЙ КОМАНДЫ</h1>
-      <div style={iframeStyle}>
-        <Iframe
+      {/* <div style={iframeStyle}> */}
+      {/* <Iframe
           url="http://www.youtube.com/embed/DZuXhbpuRRY"
           width="90%"
           height="auto"
-        />
-      </div>
+        /> */}
+      <YouTube videoId="DZuXhbpuRRY" opts={opts} />
+      {/* </div> */}
     </div>
   );
 }
@@ -33,14 +35,10 @@ const h1Style = {
   fontSize: "30px",
 };
 
-const iframeStyle = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "200px",
+const opts = {
+  // Youtube embed styling
   width: "90%",
-  background: "rgb(98,110,96)",
+  height: "auto",
 };
 
 const youtubeStyle = {

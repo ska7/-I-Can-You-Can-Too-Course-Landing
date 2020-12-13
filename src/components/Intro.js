@@ -153,14 +153,14 @@ const pStyle = {
 };
 
 const buttonStyle = {
-  marginTop: "13px",
+  margin: "13px 0 20px 0",
   width: "100%",
-  height: "auto",
+  height: "100px",
   padding: "10px",
   borderRadius: "15px",
   background: "transparent",
   color: "#626e60",
-  fontSize: "100%",
+  fontSize: "90%",
   fontWeight: "bold",
   border: "3px solid #626e60",
 };

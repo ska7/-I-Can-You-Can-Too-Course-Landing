@@ -14,7 +14,7 @@ export default function Video({ videoID }) {
 
 const blockStyle = {
   background: "rgb(225,198,153)",
-  height: "130vh",
+  minHeight: "130vh",
   maxWidth: "480px",
   display: "flex",
   flexDirection: "column",
@@ -38,6 +38,7 @@ const iframeStyle = {
   width: "85%",
   background: "rgb(98,110,96)",
   borderRadius: "20px",
+  margin: "30px 0",
 };
 
 const opts = {

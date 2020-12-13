@@ -14,13 +14,12 @@ export default function Prices({ features }) {
     <div style={blockStyle} className="prices-section">
       <Modal
         isOpen={isOpen}
-        // onAfterOpen={afterOpenModal}
         onRequestClose={() => openModal(false)}
         style={modalStyle}
-        // contentLabel={}
       >
         <PaymentForm />
       </Modal>
+
       <div
         id="prices"
         data-aos="fade"
@@ -60,7 +59,7 @@ export default function Prices({ features }) {
 }
 
 const blockStyle = {
-  height: "120vh",
+  minHeight: "120vh",
   width: "100%",
   display: "flex",
   flexDirection: "column",
@@ -79,6 +78,7 @@ const h1Style = {
 
 const priceStyle = {
   color: "red",
+  fontFamily: `"Montserrat", sans-serif`,
 };
 
 const listStyle = {
@@ -94,7 +94,7 @@ const listItemStyle = {
 };
 
 const buttonStyle = {
-  marginTop: "13px",
+  margin: "0 0 50px 0",
   width: "80%",
   height: "auto",
   padding: "10px",

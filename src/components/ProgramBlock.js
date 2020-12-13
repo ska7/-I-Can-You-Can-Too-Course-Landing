@@ -1,5 +1,6 @@
 import React from "react";
 import demo from "../img/Арина.jpg";
+import { Link } from "react-scroll";
 
 export default function ProgramBlock({
   blockName,
@@ -29,7 +30,9 @@ export default function ProgramBlock({
           })}
         </div>
       </div>
-      <button style={buttonStyle}>ХОЧУ НА СЕМИНАР</button>
+      <Link style={centerColumn} active smooth to="prices" duration="1000">
+        <button style={buttonStyle}>ХОЧУ НА СЕМИНАР</button>
+      </Link>
     </div>
   );
 }

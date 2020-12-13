@@ -66,7 +66,6 @@ $app-yellow: rgb(255, 193, 7);
 
 .program-section {
   font-family: "Cormorant Garamond", serif;
-  max-width: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,10 +85,6 @@ $app-yellow: rgb(255, 193, 7);
 .payment-form-section {
   font-family: "Cormorant Garamond", serif;
 }
-
-// .form-button {
-//   color: beige;
-// }
 
 // Animation
 

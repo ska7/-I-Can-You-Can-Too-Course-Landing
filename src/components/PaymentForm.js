@@ -34,7 +34,7 @@ export default function PaymentForm() {
           <input
             style={buttonStyle}
             type="submit"
-            value="Оплатить ₽"
+            value="RUB ₽"
             onClick={() => setCharge(charge)}
           />
 
@@ -42,7 +42,7 @@ export default function PaymentForm() {
             onClick={() => setCharge(1000)}
             style={buttonStyle}
             type="submit"
-            value="Оплатить ₴"
+            value="UAH ₴"
           />
         </div>
       </form>
@@ -61,6 +61,7 @@ const userInputFieldStyle = {
   width: "80%",
   border: "1px solid black",
   background: "beige",
+  borderRadius: "5px",
 };
 
 const pStyle = {
@@ -70,12 +71,13 @@ const pStyle = {
 
 const buttonStyle = {
   marginTop: "20px",
-  width: "40%",
+  width: "45%",
   padding: " 10px",
-  fontSize: "12px",
+  fontSize: "15px",
   backgroundColor: "transparent",
   border: "1px solid beige",
   color: "beige",
+  borderRadius: "5px",
 };
 
 const centerRow = {

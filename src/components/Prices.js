@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import PaymentForm from "./PaymentForm";
+import Modal from "react-modal";
+import PaymentFormMeta from "./PaymentFormMeta";
+
+const paymentForm = <PaymentForm />;
+
+Modal.setAppElement("#root");
+
 export default function Prices({ features }) {
+  const [isOpen, openModal] = useState(false);
+
   return (
     <div style={blockStyle} className="prices-section">
+      <Modal
+        isOpen={isOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={() => openModal(false)}
+        style={modalStyle}
+        // contentLabel={}
+      >
+        <PaymentForm />
+      </Modal>
       <div
         id="prices"
         data-aos="fade"
@@ -10,7 +29,7 @@ export default function Prices({ features }) {
       >
         <h1 style={h1Style}>ВСЕГО ЗА</h1>
         <h1 style={h1Style}>
-          <span style={priceStyle}>89₽</span> ТЫ ПОЛУЧИШЬ:
+          <span style={priceStyle}>99₽</span> ТЫ ПОЛУЧИШЬ:
         </h1>
         <ul style={listStyle}>
           {features.map((feature, i) => {
@@ -26,7 +45,13 @@ export default function Prices({ features }) {
             );
           })}
         </ul>
-        <button data-aos="zoom-in" data-aos-delay="1000" style={buttonStyle}>
+
+        <button
+          onClick={() => openModal(true)}
+          data-aos="zoom-in"
+          data-aos-delay="1000"
+          style={buttonStyle}
+        >
           Я с вами, девочки!
         </button>
       </div>
@@ -36,7 +61,7 @@ export default function Prices({ features }) {
 
 const blockStyle = {
   height: "120vh",
-  maxWidth: "480px",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
@@ -79,4 +104,13 @@ const buttonStyle = {
   fontSize: "20px",
   fontWeight: "bold",
   border: "2px solid brown",
+};
+
+const modalStyle = {
+  content: {
+    position: "absolute",
+    height: "200px",
+    margin: "auto 0 auto 0",
+    background: "rgb(98,110,96)",
+  },
 };

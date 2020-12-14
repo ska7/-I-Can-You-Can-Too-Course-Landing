@@ -40,7 +40,11 @@ export default function Prices({ features }) {
             );
           })}
         </ul>
-        <a href="https://monecle.com/buy/40187" target="_blank">
+        <a
+          href="https://monecle.com/buy/40187"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button id="prices" data-aos="zoom-in" style={buttonStyle}>
             Хочу к вам, я из Украины
           </button>
@@ -60,7 +64,7 @@ export default function Prices({ features }) {
 }
 
 const blockStyle = {
-  minHeight: "140vh",
+  minHeight: "180vh",
   maxWidth: "480px",
   display: "flex",
   flexDirection: "column",

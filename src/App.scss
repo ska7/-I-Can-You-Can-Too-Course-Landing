@@ -26,26 +26,15 @@ $app-yellow: rgb(255, 193, 7);
     flex-direction: column;
     align-items: center;
   }
-  .navbar-section {
-    position: absolute;
-    top: 5;
-    z-index: 2;
-    width: 480px;
-    font-family: $main-font;
-  }
-  .prices-section {
-    position: relative;
-    width: 480px;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-  .reviews-section,
+  .video-section,
+  .intro-section,
   .program-section,
-  .experts-section,
-  .course-info-section {
+  .prices-section {
     border-right: 1px solid black;
     border-left: 1px solid black;
+  }
+  .payment-form-section {
+    width: 480px;
   }
 }
 
@@ -65,6 +54,7 @@ $app-yellow: rgb(255, 193, 7);
 
 .intro-section {
   font-family: "Cormorant Garamond", serif;
+  border-top: 1px solid black;
 }
 
 .program-section {
@@ -83,6 +73,7 @@ $app-yellow: rgb(255, 193, 7);
 
 .prices-section {
   font-family: "Cormorant Garamond", serif;
+  border-bottom: 1px solid black;
 }
 
 .payment-form-section {

@@ -18,9 +18,9 @@ export default function ProgramBlock({ lessons, blockName }) {
                     <img style={imageStyle} src={lesson.avatar} alt="expert" />
                   </div>
                 </div>
-                <a style={aStyle} href={lesson.link} target="_blank">
-                  <h3 style={h3Style}>{lesson.name}</h3>
-                </a>
+                {/* <a style={aStyle} href={lesson.link} target="_blank"> */}
+                <h3 style={h3Style}>{lesson.name}</h3>
+                {/* </a> */}
                 <b style={lessonStyle}>{lesson.topic}</b>
               </span>
             );

@@ -10,7 +10,8 @@ export const courseLessons = [
   {
     topic: `Красота как социальный конструкт. Влияние красоты на сферы жизни девушки`,
     avatar: vika,
-    name: `Вика @kininbaevavi`,
+    name: `Вика @kininbaevavi
+    `,
     link: "https://www.instagram.com/kininbaevavi/",
   },
   {

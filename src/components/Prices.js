@@ -23,7 +23,7 @@ export default function Prices({ features }) {
       <div data-aos="fade" data-aos-duration="2000" style={titleStyle}>
         <h1 style={h1Style}>ВСЕГО ЗА</h1>
         <h1 style={h1Style}>
-          <span style={priceStyle}>199₽</span>
+          <span style={priceStyle}>249₽</span>
         </h1>
         <h1 style={h1Style}>ТЫ ПОЛУЧИШЬ:</h1>
         <ul style={listStyle}>

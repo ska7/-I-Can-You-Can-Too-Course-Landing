@@ -13,7 +13,7 @@ export default function Intro() {
           <span style={{ fontSize: "60px" }}>Ты</span> можешь
         </span>
       </div>
-      <div style={courseMotoStyle} data-aos="fade-in" data-aos-delay="2000">
+      <div style={courseMotoStyle} data-aos="fade-in" data-aos-delay="1000">
         <h2 style={h2Style}>Онлайн-семинар про бесстрашный путь девушки</h2>
         <p style={pStyle}>
           7-дневный онлайн-саминар на котором 7 эксперток помогут тебе найти

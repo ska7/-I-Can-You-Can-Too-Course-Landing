@@ -3,7 +3,7 @@ import PaymentFormMeta from "./PaymentFormMeta";
 
 export default function PaymentForm() {
   const [state, setState] = useState("");
-  const [charge, setCharge] = useState(199);
+  const [charge, setCharge] = useState(249);
 
   return (
     <div>

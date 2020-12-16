@@ -36,6 +36,10 @@ $app-yellow: rgb(255, 193, 7);
   .payment-form-section {
     width: 480px;
   }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 // Mobile Devices
